@@ -2,6 +2,7 @@ import type { Profile, Repository } from "@/interfaces";
 import { useEffect, useState } from "react";
 
 import { GithubContext } from "@/context";
+import { GithubService } from "@/services/github.service";
 
 interface GithubProvider {
   children: React.ReactNode;
@@ -21,7 +22,13 @@ export const GithubProvider = ({ children }: GithubProvider) => {
   useEffect(() => {
     if (search.length === 0) return;
     const timeout = setTimeout(() => {
-      console.log(search);
+      GithubService.searchProfile(search).then((data) => {
+        if (!data) {
+          setPreviewProfile(undefined);
+        } else {
+          setPreviewProfile(data);
+        }
+      });
     }, 500);
     return () => clearInterval(timeout);
   }, [search]);
