@@ -9,7 +9,7 @@ interface GithubProvider {
 }
 
 export const GithubProvider = ({ children }: GithubProvider) => {
-  const [previewProfile, setPreviewProfile] = useState<Profile>();
+  const [previewProfile, setPreviewProfile] = useState<Profile | null>();
   const [profile, setProfile] = useState<Profile>();
   const [repositories, setRepositories] = useState<Repository[]>();
   const [username, setUsername] = useState<string>("github");
@@ -20,11 +20,15 @@ export const GithubProvider = ({ children }: GithubProvider) => {
   };
 
   useEffect(() => {
-    if (search.length === 0) return;
+    if (search.length === 0) {
+      setPreviewProfile(undefined);
+      return;
+    }
     const timeout = setTimeout(() => {
       GithubService.searchProfile(search).then((data) => {
+        console.log({ data });
         if (!data) {
-          setPreviewProfile(undefined);
+          setPreviewProfile(null);
         } else {
           setPreviewProfile(data);
         }

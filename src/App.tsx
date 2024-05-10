@@ -1,4 +1,4 @@
-import { Filter, Hero } from "@/components";
+import { Filter, FilterResult, Hero } from "@/components";
 
 import { GithubProvider } from "./provider/GithubProvider";
 
@@ -7,6 +7,7 @@ const App = () => {
     <GithubProvider>
       <Hero>
         <Filter />
+        <FilterResult />
       </Hero>
     </GithubProvider>
   );
