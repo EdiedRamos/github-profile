@@ -15,7 +15,7 @@ export default {
         "cc-midnight-gray": "#4A5567",
         "cc-misty-gray": "#CDD5E0"
       },
-      spacing: {
+      fontSize: {
         "cs-100": "12px",
         "cs-200": "16px",
         "cs-300": "20px",
