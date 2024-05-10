@@ -20,7 +20,7 @@ export const FilterResult = () => {
           />
           <div className="flex flex-col flex-wrap w-full">
             <p className="text-cc-misty-gray text-center sm:text-start">
-              {previewProfile.name}
+              {previewProfile.name ?? previewProfile.login}
             </p>
             <p className="text-cc-misty-gray text-cs-100 text-center sm:text-start">
               {previewProfile.bio}
