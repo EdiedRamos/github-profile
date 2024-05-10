@@ -7,13 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        "midnight-blue": "#111729",
-        "midnight-purple": "#1D1B48",
-        "vibrant-blue": "#3662E3",
-        "midnight-navy": "#20293A",
-        "midnight-slate": "#364153",
-        "midnight-gray": "#4A5567",
-        "misty-gray": "#CDD5E0"
+        "cc-midnight-blue": "#111729",
+        "cc-midnight-purple": "#1D1B48",
+        "cc-vibrant-blue": "#3662E3",
+        "cc-midnight-navy": "#20293A",
+        "cc-midnight-slate": "#364153",
+        "cc-midnight-gray": "#4A5567",
+        "cc-misty-gray": "#CDD5E0"
       }
     },
   },
