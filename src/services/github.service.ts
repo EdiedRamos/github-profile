@@ -8,9 +8,9 @@ export const GithubService = {
     if (!response.ok) return undefined;
     return (await response.json()) as Profile;
   },
-  async searchRepository(profile: string): Promise<Repository | undefined> {
+  async searchRepository(profile: string): Promise<Repository[] | undefined> {
     const response: Response = await fetch(`${GITHUG_API}/${profile}/repos`);
     if (!response.ok) return undefined;
-    return (await response.json()) as Repository;
+    return (await response.json()) as Repository[];
   },
 };
