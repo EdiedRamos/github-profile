@@ -15,6 +15,11 @@ export const GithubProvider = ({ children }: GithubProvider) => {
   const [username, setUsername] = useState<string>("github");
   const [search, setSearch] = useState<string>("");
 
+  const resetAllSearchInfo = () => {
+    setSearch("");
+    setPreviewProfile(undefined);
+  };
+
   const handleSearch = (search: string): void => {
     setSearch(search);
   };
@@ -64,6 +69,7 @@ export const GithubProvider = ({ children }: GithubProvider) => {
   useEffect(() => {
     handleProfile(username);
     handleRepositories(username);
+    resetAllSearchInfo();
   }, [username]);
 
   useEffect(() => {

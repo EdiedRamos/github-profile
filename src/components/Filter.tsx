@@ -2,7 +2,7 @@ import { SearchIcon } from "@/assets";
 import { useGithub } from "@/hook/useGithub";
 
 export const Filter = () => {
-  const { handleSearch } = useGithub();
+  const { handleSearch, search } = useGithub();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) =>
     handleSearch(event.target.value);
@@ -12,6 +12,7 @@ export const Filter = () => {
       <div className={"relative flex mx-auto max-w-[400px]"}>
         <SearchIcon className="absolute top-[50%] left-3 translate-y-[-50%] text-red-400" />
         <input
+          value={search}
           onChange={handleChange}
           className="w-full pl-11 pr-4 h-[50px] rounded-[16px] focus:outline-none focus:ring focus:ring-cc-vibrant-blue bg-cc-midnight-navy text-cc-misty-gray text-cs-200"
           type="text"
