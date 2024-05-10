@@ -14,6 +14,12 @@ export default {
         "cc-midnight-slate": "#364153",
         "cc-midnight-gray": "#4A5567",
         "cc-misty-gray": "#CDD5E0"
+      },
+      spacing: {
+        "cs-100": "12px",
+        "cs-200": "16px",
+        "cs-300": "20px",
+        "cs-400": "32px"
       }
     },
   },
