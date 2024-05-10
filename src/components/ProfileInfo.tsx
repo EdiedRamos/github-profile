@@ -22,6 +22,14 @@ export const ProfileInfo = () => {
           </div>
         </div>
       </div>
+      <div className="custom-container mt-10 lg:mt-[-15px]">
+        <p className="text-cs-400 font-medium text-cc-misty-gray text-center md:text-start">
+          {profile?.name}
+        </p>
+        <p className="text-cc-misty-gray text-center md:text-start">
+          {profile?.bio}
+        </p>
+      </div>
     </section>
   );
 };
