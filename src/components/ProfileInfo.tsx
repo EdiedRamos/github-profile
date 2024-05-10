@@ -24,7 +24,7 @@ export const ProfileInfo = () => {
       </div>
       <div className="custom-container mt-10 lg:mt-[-15px]">
         <p className="text-cs-400 font-medium text-cc-misty-gray text-center md:text-start">
-          {profile?.name}
+          {profile?.name ?? profile?.login}
         </p>
         <p className="text-cc-misty-gray text-center md:text-start">
           {profile?.bio}
