@@ -6,7 +6,7 @@ export const Filter = () => {
       <div className="flex gap-2 bg-cc-midnight-blue mx-auto max-w-[400px] p-[16px] rounded-[16px]">
         <SearchIcon />
         <input
-          className="bg-cc-midnight-blue text-cc-misty-gray text-cs-200 outline-none w-full"
+          className="w-full outline-none bg-cc-midnight-blue text-cc-misty-gray text-cs-200"
           type="text"
           placeholder="username"
         />
