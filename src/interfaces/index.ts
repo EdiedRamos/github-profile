@@ -4,6 +4,7 @@ interface License {
 
 export interface Profile {
   name: string;
+  login: string;
   avatar_url: string;
   bio: string;
   followers: number;
