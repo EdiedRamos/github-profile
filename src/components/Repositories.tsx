@@ -1,19 +1,27 @@
 import { RepositoryInfo } from "./RepositoryInfo";
-import { useGithub } from "@/hook/useGithub";
+import { useRepositories } from "@/hook";
 
 export const Repositories = () => {
-  const { repositories } = useGithub();
+  const { repositoriesFiltered, needShowMore, showAll, viewAll } =
+    useRepositories();
 
   return (
-    <section className="bg-cc-midnight-navy pt-8">
+    <section className="bg-cc-midnight-navy pt-8 pb-4">
       <div className="custom-container grid grid-cols-1 lg:grid-cols-2 gap-5 items-start">
-        {repositories.map((repository) => (
+        {repositoriesFiltered.map((repository) => (
           <RepositoryInfo key={repository.id} repository={repository} />
         ))}
-        <p className="text-center text-green-400">
-          View all repositories {repositories.length}
-        </p>
       </div>
+
+      {needShowMore && !viewAll ? (
+        <div className="mt-5 pb-5 flex">
+          <button className="mx-auto" onClick={showAll}>
+            <p className="text-center text-cc-misty-gray-200">
+              View all repositories
+            </p>
+          </button>
+        </div>
+      ) : null}
     </section>
   );
 };
