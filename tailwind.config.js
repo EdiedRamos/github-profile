@@ -7,7 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        "ediedramos": "#282c34"
+        "midnight-blue": "#111729",
+        "midnight-purple": "#1D1B48",
+        "vibrant-blue": "#3662E3",
+        "midnight-navy": "#20293A",
+        "midnight-slate": "#364153",
+        "midnight-gray": "#4A5567",
+        "misty-gray": "#CDD5E0"
       }
     },
   },
