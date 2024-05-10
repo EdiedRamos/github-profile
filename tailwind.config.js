@@ -24,6 +24,9 @@ export default {
       }
     },
   },
+  corePlugins: {
+    fontFamily: false
+  },
   plugins: [],
 }
 
