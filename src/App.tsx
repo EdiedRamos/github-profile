@@ -1,12 +1,14 @@
 import { Filter, Hero } from "@/components";
 
+import { GithubProvider } from "./provider/GithubProvider";
+
 const App = () => {
   return (
-    <div>
+    <GithubProvider>
       <Hero>
         <Filter />
       </Hero>
-    </div>
+    </GithubProvider>
   );
 };
 
