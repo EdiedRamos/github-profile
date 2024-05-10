@@ -6,7 +6,7 @@ export const ProfileInfo = () => {
 
   return (
     <section className="bg-cc-midnight-navy">
-      <div className="w-[95%] md:w-[760px] lg:w-[1000px] mx-auto flex gap-10 flex-col md:flex-row">
+      <div className="custom-container flex gap-10 flex-col md:flex-row">
         <div className="relative w-[120px] h-[120px] top-[-30px] border-[7px] border-cc-midnight-navy rounded-[8px] bg-cc-midnight-navy mx-auto">
           <img
             className="rounded-[8px]"

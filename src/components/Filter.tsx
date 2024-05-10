@@ -8,7 +8,7 @@ export const Filter = () => {
     handleSearch(event.target.value);
 
   return (
-    <div className="pt-[32px]">
+    <div className="pt-[32px] custom-container">
       <div className={"relative flex mx-auto max-w-[400px]"}>
         <SearchIcon className="absolute top-[50%] left-3 translate-y-[-50%] text-red-400" />
         <input
