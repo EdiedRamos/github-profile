@@ -8,31 +8,25 @@ interface RepositoryInfo {
 
 export const RepositoryInfo = ({ repository }: RepositoryInfo) => {
   return (
-    <article>
-      <p>{repository.name}</p>
-      <p>{repository.description}</p>
-      <div>
+    <article className="bg-gradient-to-r from-cc-midnight-blue to-cc-midnight-purple text-cc-misty-gray-200 p-5 rounded-xl">
+      <p className="text-cs-300 text-cc-misty-gray">{repository.name}</p>
+      <p className="text-cs-200 mt-3">{repository.description}</p>
+      <div className="flex gap-3 items-center mt-5">
         {repository.license && (
-          <p>
-            <span>
-              <ChieldIcon />
-            </span>{" "}
-            {repository.license.spdx_id}
-          </p>
+          <div className="flex gap-1">
+            <ChieldIcon />
+            <p> {repository.license.spdx_id}</p>
+          </div>
         )}
-        <p>
-          <span>
-            <NestingIcon />
-          </span>{" "}
-          {repository.forks_count}
-        </p>
-        <p>
-          <span>
-            <StarIcon />
-          </span>{" "}
-          {repository.stargazers_count}
-        </p>
-        <p>{repository.updated_at}</p>
+        <div className="flex gap-1">
+          <NestingIcon />
+          <p>{repository.forks_count}</p>
+        </div>
+        <div className="flex gap-1">
+          <StarIcon />
+          <p>{repository.stargazers_count}</p>
+        </div>
+        <p className="text-cs-100">{repository.updated_at}</p>
       </div>
     </article>
   );

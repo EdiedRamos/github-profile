@@ -13,7 +13,8 @@ export default {
         "cc-midnight-navy": "#20293A",
         "cc-midnight-slate": "#364153",
         "cc-midnight-gray": "#4A5567",
-        "cc-misty-gray": "#CDD5E0"
+        "cc-misty-gray": "#CDD5E0",
+        "cc-misty-gray-200": "#97A3B6"
       },
       fontSize: {
         "cs-100": "12px",
