@@ -4,7 +4,7 @@ export const SearchIcon = () => {
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      fill="currentColor"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle cx="11" cy="11" r="7" stroke="#97A3B6" strokeWidth="2" />
