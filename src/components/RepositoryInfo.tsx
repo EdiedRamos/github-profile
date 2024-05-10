@@ -11,7 +11,7 @@ export const RepositoryInfo = ({ repository }: RepositoryInfo) => {
     <article className="bg-gradient-to-r from-cc-midnight-blue to-cc-midnight-purple text-cc-misty-gray-200 p-5 rounded-xl">
       <p className="text-cs-300 text-cc-misty-gray">{repository.name}</p>
       <p className="text-cs-200 mt-3">{repository.description}</p>
-      <div className="flex flex-wrap gap-3 items-center mt-5">
+      <div className="flex flex-wrap gap-3 items-center mt-5 font-medium">
         {repository.license && (
           <div className="flex gap-1">
             <ChieldIcon />
