@@ -1,5 +1,11 @@
+import { Hero } from "@/components";
+
 const App = () => {
-  return <div>app</div>;
+  return (
+    <div>
+      <Hero />
+    </div>
+  );
 };
 
 export default App;
