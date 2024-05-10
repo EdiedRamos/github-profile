@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react";
+
 import { useGithub } from "@/hook";
-import { useState } from "react";
 
 export const useRepositories = () => {
   const { repositories } = useGithub();
@@ -7,6 +8,10 @@ export const useRepositories = () => {
   const [viewAll, setViewAll] = useState(false);
 
   const showAll = () => setViewAll(true);
+
+  useEffect(() => {
+    setViewAll(false);
+  }, [repositories]);
 
   return {
     viewAll,

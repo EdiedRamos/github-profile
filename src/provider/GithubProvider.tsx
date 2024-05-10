@@ -19,6 +19,10 @@ export const GithubProvider = ({ children }: GithubProvider) => {
     setSearch(search);
   };
 
+  const handleUsername = (): void => {
+    setUsername(search);
+  };
+
   const handleProfile = useCallback((username: string) => {
     GithubService.searchProfile(username).then((data) => {
       if (data) {
@@ -58,7 +62,8 @@ export const GithubProvider = ({ children }: GithubProvider) => {
   }, [search]);
 
   useEffect(() => {
-    console.log({ username });
+    handleProfile(username);
+    handleRepositories(username);
   }, [username]);
 
   useEffect(() => {
@@ -73,6 +78,7 @@ export const GithubProvider = ({ children }: GithubProvider) => {
     username,
     search,
     handleSearch,
+    handleUsername,
   };
 
   return (

@@ -9,6 +9,7 @@ interface GithubContext {
   username: string;
   search: string;
   handleSearch: (search: string) => void;
+  handleUsername: () => void;
 }
 
 export const GithubContext = createContext<GithubContext | null>(null);

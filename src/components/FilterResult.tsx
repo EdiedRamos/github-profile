@@ -1,7 +1,7 @@
 import { useGithub } from "@/hook/useGithub";
 
 export const FilterResult = () => {
-  const { previewProfile } = useGithub();
+  const { previewProfile, handleUsername } = useGithub();
 
   if (previewProfile === undefined) return <></>;
 
@@ -12,7 +12,10 @@ export const FilterResult = () => {
           <p className="text-cc-misty-gray">😟 Not found 🙄</p>
         </div>
       ) : (
-        <div className="flex flex-wrap sm:flex-nowrap justify-center w-full gap-[12px] items-center p-[8px]">
+        <div
+          className="flex flex-wrap sm:flex-nowrap justify-center w-full gap-[12px] items-center p-[8px] hover:outline-none hover:ring hover:border-blue-300 hover:rounded-xl hover:cursor-pointer"
+          onClick={handleUsername}
+        >
           <img
             className="w-[80px] h-[80px] rounded-xl object-cover"
             src={previewProfile.avatar_url}
