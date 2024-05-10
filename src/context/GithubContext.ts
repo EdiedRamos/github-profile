@@ -5,7 +5,7 @@ import { createContext } from "react";
 interface GithubContext {
   previewProfile: Profile | undefined | null;
   profile: Profile | undefined;
-  repositories: Repository[] | undefined;
+  repositories: Repository[];
   username: string;
   search: string;
   handleSearch: (search: string) => void;

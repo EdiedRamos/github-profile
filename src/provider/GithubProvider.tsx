@@ -1,5 +1,5 @@
 import type { Profile, Repository } from "@/interfaces";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { GithubContext } from "@/context";
 import { GithubService } from "@/services/github.service";
@@ -11,13 +11,33 @@ interface GithubProvider {
 export const GithubProvider = ({ children }: GithubProvider) => {
   const [previewProfile, setPreviewProfile] = useState<Profile | null>();
   const [profile, setProfile] = useState<Profile>();
-  const [repositories, setRepositories] = useState<Repository[]>();
+  const [repositories, setRepositories] = useState<Repository[]>([]);
   const [username, setUsername] = useState<string>("github");
   const [search, setSearch] = useState<string>("");
 
   const handleSearch = (search: string): void => {
     setSearch(search);
   };
+
+  const handleProfile = useCallback((username: string) => {
+    GithubService.searchProfile(username).then((data) => {
+      if (data) {
+        setProfile(data);
+      } else {
+        setProfile(undefined);
+      }
+    });
+  }, []);
+
+  const handleRepositories = useCallback((username: string) => {
+    GithubService.searchRepository(username).then((data) => {
+      if (data) {
+        setRepositories(data);
+      } else {
+        setRepositories([]);
+      }
+    });
+  }, []);
 
   useEffect(() => {
     if (search.length === 0) {
@@ -42,11 +62,8 @@ export const GithubProvider = ({ children }: GithubProvider) => {
   }, [username]);
 
   useEffect(() => {
-    GithubService.searchProfile("github").then((data) => {
-      if (data) {
-        setProfile(data);
-      }
-    });
+    handleProfile("github");
+    handleRepositories("github");
   }, []);
 
   const values = {
