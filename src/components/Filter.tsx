@@ -13,7 +13,7 @@ export const Filter = () => {
         <SearchIcon className="absolute top-[50%] left-3 translate-y-[-50%] text-red-400" />
         <input
           onChange={handleChange}
-          className="w-full pl-11 pr-4 h-[50px] rounded-[16px] focus:outline-none focus:ring focus:ring-cc-vibrant-blue bg-cc-midnight-blue text-cc-misty-gray text-cs-200"
+          className="w-full pl-11 pr-4 h-[50px] rounded-[16px] focus:outline-none focus:ring focus:ring-cc-vibrant-blue bg-cc-midnight-navy text-cc-misty-gray text-cs-200"
           type="text"
           placeholder="username"
         />
