@@ -1,6 +1,7 @@
 import { ChieldIcon, NestingIcon, StarIcon } from "@/assets";
 
 import type { Repository } from "@/interfaces";
+import { formatNumberUSD } from "@/utils";
 
 interface RepositoryInfo {
   repository: Repository;
@@ -20,11 +21,11 @@ export const RepositoryInfo = ({ repository }: RepositoryInfo) => {
         )}
         <div className="flex gap-1">
           <NestingIcon />
-          <p>{repository.forks_count}</p>
+          <p>{formatNumberUSD(repository.forks_count)}</p>
         </div>
         <div className="flex gap-1">
           <StarIcon />
-          <p>{repository.stargazers_count}</p>
+          <p>{formatNumberUSD(repository.stargazers_count)}</p>
         </div>
         <p className="text-cs-100">{repository.updated_at}</p>
       </div>
