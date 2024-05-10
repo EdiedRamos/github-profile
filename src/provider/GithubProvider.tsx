@@ -41,6 +41,14 @@ export const GithubProvider = ({ children }: GithubProvider) => {
     console.log({ username });
   }, [username]);
 
+  useEffect(() => {
+    GithubService.searchProfile("github").then((data) => {
+      if (data) {
+        setProfile(data);
+      }
+    });
+  }, []);
+
   const values = {
     previewProfile,
     profile,
