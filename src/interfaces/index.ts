@@ -13,6 +13,7 @@ export interface Profile {
 }
 
 export interface Repository {
+  id: number;
   name: string;
   description: string;
   forks_count: number;
