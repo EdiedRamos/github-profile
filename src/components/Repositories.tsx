@@ -6,7 +6,7 @@ export const Repositories = () => {
 
   return (
     <section className="bg-cc-midnight-navy pt-8">
-      <div className="custom-container grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <div className="custom-container grid grid-cols-1 lg:grid-cols-2 gap-5 items-start">
         {repositories.map((repository) => (
           <RepositoryInfo key={repository.id} repository={repository} />
         ))}
