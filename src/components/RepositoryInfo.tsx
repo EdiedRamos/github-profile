@@ -15,7 +15,7 @@ export const RepositoryInfo = ({ repository }: RepositoryInfo) => {
         {repository.license && (
           <div className="flex gap-1">
             <ChieldIcon />
-            <p> {repository.license.spdx_id}</p>
+            <p>{repository.license.spdx_id}</p>
           </div>
         )}
         <div className="flex gap-1">
