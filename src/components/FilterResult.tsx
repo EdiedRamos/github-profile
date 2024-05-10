@@ -9,7 +9,7 @@ export const FilterResult = () => {
     <div className="max-w-[400px] bg-cc-midnight-blue mx-auto rounded-[16px] min-h-[100px] mt-4 flex items-center">
       {previewProfile === null ? (
         <div className="flex justify-center items-center w-full">
-          <p className="text-cc-misty-gray">Not found</p>
+          <p className="text-cc-misty-gray">😟 Not found 🙄</p>
         </div>
       ) : (
         <div className="flex flex-wrap sm:flex-nowrap justify-center w-full gap-[12px] items-center p-[8px]">
