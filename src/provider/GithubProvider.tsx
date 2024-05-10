@@ -10,7 +10,7 @@ interface GithubProvider {
 export const GithubProvider = ({ children }: GithubProvider) => {
   const [previewProfile, setPreviewProfile] = useState<Profile>();
   const [profile, setProfile] = useState<Profile>();
-  const [repository, setRepository] = useState<Repository>();
+  const [repositories, setRepositories] = useState<Repository[]>();
   const [username, setUsername] = useState<string>("github");
   const [search, setSearch] = useState<string>("");
 
@@ -33,7 +33,7 @@ export const GithubProvider = ({ children }: GithubProvider) => {
   const values = {
     previewProfile,
     profile,
-    repository,
+    repositories,
     username,
     search,
     handleSearch,
