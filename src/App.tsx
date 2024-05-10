@@ -1,9 +1,11 @@
-import { Hero } from "@/components";
+import { Filter, Hero } from "@/components";
 
 const App = () => {
   return (
     <div>
-      <Hero />
+      <Hero>
+        <Filter />
+      </Hero>
     </div>
   );
 };
