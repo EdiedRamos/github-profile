@@ -1,7 +1,7 @@
 import { ChieldIcon, NestingIcon, StarIcon } from "@/assets";
+import { elapsedTimeMessage, formatNumberUSD } from "@/utils";
 
 import type { Repository } from "@/interfaces";
-import { formatNumberUSD } from "@/utils";
 
 interface RepositoryInfo {
   repository: Repository;
@@ -27,7 +27,9 @@ export const RepositoryInfo = ({ repository }: RepositoryInfo) => {
           <StarIcon />
           <p>{formatNumberUSD(repository.stargazers_count)}</p>
         </div>
-        <p className="text-cs-100">{repository.updated_at}</p>
+        <p className="text-cs-100">
+          {elapsedTimeMessage(repository.updated_at)}
+        </p>
       </div>
     </article>
   );
