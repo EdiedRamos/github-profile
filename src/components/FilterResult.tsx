@@ -13,7 +13,7 @@ export const FilterResult = () => {
         </div>
       ) : (
         <div
-          className="flex flex-wrap sm:flex-nowrap justify-center w-full gap-[12px] items-center p-[8px] hover:outline-none hover:ring hover:border-blue-300 hover:rounded-xl hover:cursor-pointer"
+          className="flex flex-wrap sm:flex-nowrap justify-center w-full gap-[12px] items-center p-[8px] hover:outline-none hover:ring hover:ring-cc-vibrant-blue hover:rounded-xl hover:cursor-pointer"
           onClick={handleUsername}
         >
           <img

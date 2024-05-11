@@ -14,6 +14,7 @@ export interface Profile {
 
 export interface Repository {
   id: number;
+  html_url: string;
   name: string;
   description: string;
   forks_count: number;
