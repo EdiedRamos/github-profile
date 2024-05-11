@@ -8,6 +8,10 @@
   font-family: "Be Vietnam Pro", sans-serif;
 }
 
+body {
+  background-color: #20293a;
+}
+
 .custom-container {
   margin-right: auto;
   margin-left: auto;
